@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title>SADN - Photo Gallery</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  </style>
+  
+
+
+</head>
+<body id="myPage">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="index.html" class="w3-bar-item w3-button w3-teal"><img src="../Media/logo3.png" width="35" height="35" alt="logo3"/>
+      SADN</a>
+  <a href="About Us.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+  <a href="Our Work page.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Work page</a>
+  <a href="Photo Gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Photo Gallery</a>
+  <a href="Get Involved.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Get Involved</a>
+    <a href="Contact Us.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
+  </div>
+ </div>
+
+<!-- end of Navbar -->
+
+<div class="w3-display-container w3-animate-opacity">
+  <img src="../Media/banner.PNG" alt="Cover" style="width:100%;min-height:175px;max-height:300px; padding-top:55px;">
+</div>
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>SADN Photo Gallery</h2>
+
+</div>
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img  src="../Media/gallery (3).jfif" style="width:100%" height="240" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="../Media/gallery (2).jfif"  style="width:100%" height="240" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="../Media/gallery (1).jfif"  style="width:100%" height="240" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img  src="../Media/gallery (11).jpg"  style="width:100%" height="240" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:75%; height: 480px;">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+</div >
+
+<br><br><br><br><br><br><br><br><br>
+    
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by SADN</a></p>
+  
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1oFKMc47wtSkw_UT8c_geIRtPzgzqfyRikoc-oO-1X3GYow/viewform?embedded=true" width="640" height="240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+ 
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+    </body>
+</html>
